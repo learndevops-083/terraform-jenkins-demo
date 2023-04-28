@@ -20,6 +20,7 @@ resource "aws_launch_template" "web" {
   name_prefix            = "web"
   image_id               = data.aws_ami.linux.id
   instance_type          = var.web_instance_type
+  key_name               = var.instance_keypair
   vpc_security_group_ids = [var.web_sg]
   user_data              = filebase64("install_apache.sh")
 
