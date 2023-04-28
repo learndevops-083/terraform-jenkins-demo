@@ -10,9 +10,9 @@ variable "web_instance_type" {
   default = "t2.micro"
 }
 variable "instance_keypair" {
-    description = "AWS EC2 key pair for ssh access"
-    type = string
-    default ="demo-kp" 
-    sensitive = true
- }
+  description = "AWS EC2 key pair for ssh access"
+  type        = string
+  default     = "demo-kp"
+  sensitive   = true
+}
 
